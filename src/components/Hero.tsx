@@ -10,7 +10,7 @@ const avatarImg = "/images/developer_portrait_1782641896683.webp";
 
 // Typing animation items
 const TYPING_WORDS = [
-  "Hi, I'm Prasad Waghmode",
+  "Hi, I'm Prasad Waghmode From Pune, Maharashtra, India",
   "Full Stack Developer",
   "Angular | React.js | Node.js | AWS | MySQL"
 ];
