@@ -6,7 +6,7 @@
 
 A modern, futuristic, and fully responsive developer portfolio built with **React**, **TypeScript**, and **Tailwind CSS** to showcase my experience, technical skills, enterprise projects, and services.
 
-[🌐 Live Portfolio](https://YOUR-DOMAIN.vercel.app) • [💼 LinkedIn](https://linkedin.com/in/prasad-waghmode-7355b3207) • [📧 Email](mailto:prasadwaghmode05@gmail.com)
+[🌐 Live Portfolio](https://prasad-portfolio-olive.vercel.app) • [💼 LinkedIn](https://linkedin.com/in/prasad-waghmode-7355b3207) • [📧 Email](mailto:prasadwaghmode05@gmail.com)
 
 </div>
 
@@ -147,7 +147,7 @@ public
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/prasad-portfolio.git
+git clone https://github.com/prasadwaghmode/prasad-portfolio
 ```
 
 Navigate to the project
@@ -216,7 +216,7 @@ A downloadable resume is available directly from the portfolio.
 
 💼 LinkedIn: https://linkedin.com/in/prasad-waghmode-7355b3207
 
-🐙 GitHub: https://github.com/YOUR_USERNAME
+🐙 GitHub: https://github.com/prasadwaghmode
 
 ---
 
