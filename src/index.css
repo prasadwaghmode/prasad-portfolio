@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-neon-purple: #a855f7;
+  --color-neon-blue: #3b82f6;
+  --color-neon-pink: #ec4899;
+  --color-dark-bg: #030014;
+}
+
+/* Base style resets and customizations */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-dark-bg);
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030014;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #a855f7);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #60a5fa, #c084fc);
+}
+
+/* Utility Animations & Glows */
+@layer utilities {
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.2);
+  }
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.2);
+  }
+  .bg-glow-purple {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.25);
+  }
+  .bg-glow-blue {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+  }
+  .border-glow-purple {
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+  }
+  .border-glow-blue {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+  }
+  .glass-card {
+    background: rgba(10, 5, 30, 0.6);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card:hover {
+    border: 1px solid rgba(168, 85, 247, 0.25);
+  }
+  .glass-card-blue:hover {
+    border: 1px solid rgba(59, 130, 246, 0.25);
+  }
+  .glass-nav {
+    background: rgba(3, 0, 20, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .bg-radial-gradient {
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.15) 0%, rgba(59, 130, 246, 0.1) 40%, transparent 70%);
+  }
+}
+
+/* Typing Caret Animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typing-cursor::after {
+  content: '|';
+  animation: blink 0.8s infinite;
+  color: #a855f7;
+  margin-left: 2px;
+}
+
+/* Sweep effect for portrait */
+@keyframes sweep {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+.sweep-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(45deg);
+  animation: sweep 4s infinite linear;
+  pointer-events: none;
+}
+
+/* Circular glowing ring behind photo */
+@keyframes rotate-ring {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.glow-ring {
+  background: conic-gradient(from 0deg, #3b82f6, #a855f7, #ec4899, #3b82f6);
+  animation: rotate-ring 12s infinite linear;
+}
+
+/* Custom map design grid */
+.map-grid {
+  background-image: radial-gradient(#ffffff0a 1px, transparent 1px);
+  background-size: 24px 24px;
+}
