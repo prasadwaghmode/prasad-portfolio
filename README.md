@@ -6,7 +6,7 @@
 
 A modern, futuristic, and fully responsive developer portfolio built with **React**, **TypeScript**, and **Tailwind CSS** to showcase my experience, technical skills, enterprise projects, and services.
 
-[🌐 Live Portfolio](https://prasad-portfolio-olive.vercel.app) • [💼 LinkedIn](https://linkedin.com/in/prasad-waghmode-7355b3207) • [📧 Email](mailto:prasadwaghmode05@gmail.com)
+[🌐 Live Portfolio](https://prasadwaghmode.vercel.app) • [💼 LinkedIn](https://linkedin.com/in/prasad-waghmode-7355b3207) • [📧 Email](mailto:prasadwaghmode05@gmail.com)
 
 </div>
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prasad-portfolio-olive.vercel.app/sitemap.xml
+Sitemap: https://prasadwaghmode.vercel.app/sitemap.xml
