@@ -16,7 +16,6 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { trackPageView } from "./utils/analytics";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -24,9 +23,6 @@ export default function App() {
   if (loading) {
     return <Loader onComplete={() => setLoading(false)} />;
   }
-  useEffect(() => {
-    trackPageView(window.location.pathname);
-  }, []);
 
   return (
     <div className="relative min-h-screen bg-[#030014] text-neutral-100 overflow-x-hidden selection:bg-purple-500/30 selection:text-white">

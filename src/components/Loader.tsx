@@ -11,11 +11,14 @@ interface LoaderProps {
 }
 
 const MESSAGES = [
-  'INITIALIZING QUANTUM FRAMEWORKS...',
-  'CONNECTING SECURE PORTFOLIO DATABASES...',
-  'OPTIMIZING HIGH-SPEED CLIENT ASSETS...',
-  'ESTABLISHING SECURE AWS INTEGRATIONS...',
-  'COMPILING PREMIUM EXPERIENCES...'
+   "Initializing Developer Portfolio...",
+  "Loading Enterprise Projects...",
+  "Rendering Angular Components...",
+  "Connecting Backend Services...",
+  "Optimizing Performance...",
+  "Building Interactive Experience...",
+  "Almost Ready...",
+  "Welcome to My Portfolio!"
 ];
 
 export default function Loader({ onComplete }: LoaderProps) {
@@ -137,9 +140,9 @@ export default function Loader({ onComplete }: LoaderProps) {
 
           {/* Tech Spec Grid details */}
           <div className="mt-16 flex gap-6 text-[10px] font-mono text-neutral-600 uppercase tracking-wider">
-            <div>HOST: CLOUD_RUN_PORT_3000</div>
+            <div>IDENTITY: PRASAD </div>
             <div>•</div>
-            <div>RUNTIME: REACT_TS_V19</div>
+            <div>CORE STACK: FULL STACK </div>
             <div>•</div>
             <div>SYSTEM: ONLINE</div>
           </div>
