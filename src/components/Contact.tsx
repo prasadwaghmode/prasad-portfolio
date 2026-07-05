@@ -54,9 +54,8 @@ const API_URL = "https://script.google.com/macros/s/AKfycbw6XK_E7uhg7CXCMHSYJoG3
   if (!formData.name || !formData.email || !formData.message) return;
 
   setStatus("submitting");
-
   try {
-    const response = await fetch(`${API_URL}/api/v1/leads/ingest`, {
+    const response = await fetch(`http://localhost:3000/api/v1/leads/ingest`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
