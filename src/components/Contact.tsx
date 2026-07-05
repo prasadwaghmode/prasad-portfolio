@@ -55,7 +55,7 @@ export default function Contact() {
 
   setStatus("submitting");
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/leads/ingest`, {
+    const response = await fetch(`http://localhost:5000/api/v1/leads/ingest`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
