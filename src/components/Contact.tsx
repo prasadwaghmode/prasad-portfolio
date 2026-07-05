@@ -11,39 +11,96 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 const API_URL = "https://script.google.com/macros/s/AKfycbw6XK_E7uhg7CXCMHSYJoG3k7ed90ig0k8QVIheXNhRI12ldNOTGSwHgWLYWmSLeoOrdA/exec";
-  const handleSubmit = async(e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+  // const handleSubmit = async(e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!formData.name || !formData.email || !formData.message) return;
 
-    setStatus('submitting');
+  //   setStatus('submitting');
 
+
+  // try {
+  //   const response = await fetch(API_URL, {
+  //     method: "POST",
+  //     body: JSON.stringify(formData),
+  //   });
+
+  //   const result = await response.json();
+    
+  //   if (result.success) {
+  //     await sendEmail(formData);
+  //   }
+  // } catch (error) {
+  //   console.error(error);
+  // }
+  //   // Simulate high-fidelity network sending
+  //   setTimeout(() => {
+  //     setStatus('success');
+  //     setFormData({ name: '', email: '', subject: '', message: '' });
+
+  //     // Reset to idle after a few seconds
+
+
+
+
+  //     setTimeout(() => {
+  //       setStatus('idle');
+  //     }, 1000);
+  //   }, 1000);
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!formData.name || !formData.email || !formData.message) return;
+
+  setStatus("submitting");
 
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${API_URL}/api/v1/leads/ingest`, {
       method: "POST",
-      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        app_id: "GRW-8RIEL2RB", // Replace with your App ID
+        form_id: null,
+        name: formData.name,
+        email: formData.email,
+        phone: "NULL",
+        company: "NULL",
+        source: "Website",
+        custom_fields: {
+          subject: formData.subject,
+          message: formData.message,
+        },
+      }),
     });
 
     const result = await response.json();
-    
-    if (result.success) {
-      await sendEmail(formData);
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || "Failed to submit form");
     }
+
+    // Optional: Send notification email
+    await sendEmail(formData);
+
+    setStatus("success");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+
+    setTimeout(() => {
+      setStatus("idle");
+    }, 1000);
   } catch (error) {
     console.error(error);
+    setStatus("error");
   }
-    // Simulate high-fidelity network sending
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-
-      // Reset to idle after a few seconds
-      setTimeout(() => {
-        setStatus('idle');
-      }, 1000);
-    }, 1000);
-  };
-
+};
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
