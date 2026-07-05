@@ -10,7 +10,7 @@ import {sendEmail} from './../services/emaillService'
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-const API_URL = "https://script.google.com/macros/s/AKfycbw6XK_E7uhg7CXCMHSYJoG3k7ed90ig0k8QVIheXNhRI12ldNOTGSwHgWLYWmSLeoOrdA/exec";
+// const API_URL = "https://script.google.com/macros/s/AKfycbw6XK_E7uhg7CXCMHSYJoG3k7ed90ig0k8QVIheXNhRI12ldNOTGSwHgWLYWmSLeoOrdA/exec";
   // const handleSubmit = async(e: React.FormEvent) => {
   //   e.preventDefault();
   //   if (!formData.name || !formData.email || !formData.message) return;
