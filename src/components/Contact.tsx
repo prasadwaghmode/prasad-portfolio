@@ -59,12 +59,10 @@ export default function Contact() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": "gr_live_beff73ed699a47d28ce083f544bcf7a596b2c143db921c9f",
-        "x-app-id": "GRW-8RIEL2RB",  
+        "x-api-key": "gr_live_7a13d9d632b1e6e51db182d7e6437abc46c9d6e57db8617c",
       },
       body: JSON.stringify({
-        app_id: "GRW-8RIEL2RB", // Replace with your App ID
-        api_key: "gr_live_beff73ed699a47d28ce083f544bcf7a596b2c143db921c9f", // Replace with your API Key
+        app_id: "GRW-DUQSMLFY", // Replace with your App ID
         form_id: null,
         name: formData.name,
         email: formData.email,
