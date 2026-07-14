@@ -52,10 +52,10 @@ export default function Contact() {
   e.preventDefault();
 
   if (!formData.name || !formData.email || !formData.message) return;
-
+  const api_url = 'https://growora-crm-backend.onrender.com/api/v1/leads/ingest';
   setStatus("submitting");
   try {
-    const response = await fetch(`http://localhost:5000/api/v1/leads/ingest`, {
+    const response = await fetch(api_url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
