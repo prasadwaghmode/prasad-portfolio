@@ -64,6 +64,7 @@ export default function Contact() {
       },
       body: JSON.stringify({
         app_id: "GRW-8RIEL2RB", // Replace with your App ID
+        api_key: "gr_live_beff73ed699a47d28ce083f544bcf7a596b2c143db921c9f", // Replace with your API Key
         form_id: null,
         name: formData.name,
         email: formData.email,
