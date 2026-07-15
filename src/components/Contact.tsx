@@ -61,7 +61,6 @@ export default function Contact() {
         "Content-Type": "application/json",
         "x-api-key": "gr_live_7a13d9d632b1e6e51db182d7e6437abc46c9d6e57db8617c",
       },
-      credentials: "include",
       body: JSON.stringify({
         app_id: "GRW-DUQSMLFY", // Replace with your App ID
         form_id: null,
